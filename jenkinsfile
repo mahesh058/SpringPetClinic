@@ -24,7 +24,7 @@ pipeline{
     }
     stage('deploy'){
         steps{
-            sh 'java -jar /var/lib/jenkins/workspace/PetClinicDeclarativePipe/target/*.jar'
+            sh 'java -jar -DServer/.port=8001 spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar'
       }
     }
   }
